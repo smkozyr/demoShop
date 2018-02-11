@@ -1,0 +1,12 @@
+.an{text-decoration: none;
+	font-family: arial;
+	}
+.an:hover{color: red;
+}
+.im{width:300px;
+	margin-right:25px;
+	margin-top:15px;
+	opacity:0.50;
+}
+.im:hover{opacity:1;
+}
