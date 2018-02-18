@@ -1,0 +1,53 @@
+.box{background-color: orange;
+  padding:1px;
+  text-align: right;
+  
+}
+.menu ul li{display: inline-block;
+	padding: 5px;
+}
+.menu ul{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-weight: 600;
+}
+.menu ul ul{display: none;
+position: absolute;
+background-color: #cc9966;
+margin-top: 5px;
+margin-left: -8px;
+}
+.menu ul ul a{
+	color: maroon;
+	text-decoration: none;
+	float: left;
+	font-family: arial;
+}
+.menu ul ul a:hover{
+	color: #003300;
+}
+.menu li:hover ul{
+	display: block;
+}
+.menu li:hover li{
+	display: block;
+}
+
+
+.an{text-decoration: none;
+	font-family: arial;
+	color: maroon;
+	}
+.an:hover{color: #003300;
+	text-shadow: none;
+}
+
+.im{width:300px;
+	margin-left: 5px;
+	margin-right:25px;
+	margin-top:15px;
+	opacity:0.50;
+}
+.im:hover{opacity:1;
+}
