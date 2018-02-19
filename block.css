@@ -1,0 +1,35 @@
+.box1{
+	border-color: red;
+	margin-left: 5px; 
+	}
+.product{
+	margin-left: 5px;
+	border: 1px solid ange;
+	padding-bottom: 100px; 
+	}
+.product img{
+	width: 200px;
+	float: left;
+	padding-right: 50px;
+	padding-left: 20px;
+}
+.product span {
+	border: 1px solid ange;
+	padding-bottom: 10px;
+}
+span{
+	font-size: 25px;
+}
+button{
+	background-color: orange;
+	width: 120px;
+}
+img.fctive {
+    border: 1px solid red;
+    position: absolute;
+    left:4px;
+    top:4px;
+    margin: 0;
+    width: 500px;
+    z-index: 123;
+}
