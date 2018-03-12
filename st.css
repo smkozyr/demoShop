@@ -1,0 +1,24 @@
+body{
+	background-color:#999;
+}
+.jumbotron{
+	background-color:#cc66cc;
+	opacity: (0.5);
+
+}
+.navbar-inverse{
+	background:#C71585;
+	border: none;
+}
+
+footer{
+	background:#C71585;
+	padding: 10px;
+}
+.list-group a{
+	background:#cc66cc;
+	border: #C71585;
+}
+.row.col-xs-6{
+	background:#cc66cc;
+}
