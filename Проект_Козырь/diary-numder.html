@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<title>Элдн.школьника</title>
+	<link href="bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/st.css">
+	<style type="text/css">
+	body{
+		background-color: #99CCFF;
+
+	}
+	</style>
+  <script type="text/javascript" src="diary.js"></script>
+<script type="text/javascript">
+function parseDataFromUrl() {
+  var sPageURL = decodeURIComponent(window.location.search.substring(1));
+  var dataFromUrl=sPageURL.split('');
+  var parts=sPageURL.split('=');
+  console.log("dataFromUrl",dataFromUrl);
+  var formData = {}; 
+ 
+  dataFromUrl.forEach(function (item) {
+    var parts=item.split('=');
+    formData[parts[0]]=parts[1];
+  });
+
+  console.log("forn Date",formData);
+  return formData;
+}
+
+  function checkUser(userInfo, validUserArray) {
+       console.log("userInfo",userInfo);
+       console.log(validUserArray);
+    for (var i = 0; i < validUserArray.length; i++) {
+      if (validUserArray[i].password ==userInfo.student)   {          
+          document.location.href = "diary-numder"+(i+1)+".html";
+
+        return true;
+      }
+    }
+    return false;
+  }
+
+  
+  var userInfo=parseDataFromUrl();
+
+  console.log("userInfo: 1", userInfo);
+
+  if (!(checkUser(userInfo, allowedUsers)== true)) {
+    console.error("User is not valid!",userInfo);
+    window.location.href = "entrance.html";  //проверяет пароль
+  }
+  </script>
+
+  </head>
+<body>
+
+<h3 align="center" >Щоденник <span id="studentName"></span> </h3>
+<br>
+
+
+<table  width="50%" >
+  <thead>
+    <tr>
+      <th scope="col" class="h5" ><mark id="className"></mark> </th>
+     </tr>
+  </thead>
+
+  <thead>
+    <tr >
+      <th scope="col" class="h5">Повідомлення батькам</th>
+      <th scope="col" id="recordsForParents"></th>
+    </tr>
+  </thead>
+  <thead>
+    <tr>
+      <th scope="col" class="h5">Поведінка </th>
+      <th scope="col" id="behaviour"></th>
+    </tr>
+  </thead>
+  </table>
+  </style>
+<br>
+
+<table class="table table-bordered table-hover table-striped" id="diaryTable">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Дисциплина</th>
+      <th scope="col">1.09</th>
+      <th scope="col">2.09</th>
+      <th scope="col">3.09</th>
+      <th scope="col">4.09</th>
+      <th scope="col">5.09</th>
+      <th scope="col">6.09</th>
+      <th scope="col">7.09</th>
+      <th scope="col">8.09</th>
+      <th scope="col">9.09</th>
+      <th scope="col">10.09</th>
+      <th scope="col">11.09</th>
+      <th scope="col">12.09</th>
+      <th scope="col">13.09</th>
+      <th scope="col">14.09</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script type="text/javascript">
+var sPageURL = decodeURIComponent(window.location.search.substring(1));
+var parts=sPageURL.split('=');
+  fillDate(parts[1]);
+</script>
+
+</body>
+</html>
